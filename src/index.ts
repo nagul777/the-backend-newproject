@@ -7,6 +7,7 @@ import jwt from "@elysiajs/jwt";
 import cors from "@elysiajs/cors";
 import { orderRouter } from "./routers/orderRouter";
 import { authRouter } from "./routers/authRoutes";
+import { webhookRouter } from "./routers/webhookrouter";
 
 
 const app = new Elysia();
@@ -39,6 +40,7 @@ app.use(productrouter)
 app.use(userRoute)
 app.use(authRouter)
 app.use(orderRouter)
+app.use(webhookRouter)
 .listen(4000);
 
 console.log(
